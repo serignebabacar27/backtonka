@@ -8,7 +8,7 @@ import multer from "multer";
 import path from "path";
 import fs from "fs";
 
-import Admin from "./models/Admin.js";
+
 import Product from "./models/Product.js";
 import Order from "./models/Order.js";
 import WeeklyMenu from "./models/WeeklyMenu.js";
