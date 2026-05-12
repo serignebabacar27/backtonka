@@ -16,7 +16,9 @@ import Admin from "./models/Admin.js";
 dotenv.config();
 
 const app = express();
-
+console.log("SERVER STARTING...");
+console.log("MONGO:", process.env.MONGO_URI ? "OK" : "MISSING");
+console.log("JWT:", process.env.JWT_SECRET ? "OK" : "MISSING");
 /* =========================
    MIDDLEWARES
 ========================= */
