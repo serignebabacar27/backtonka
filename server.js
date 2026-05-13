@@ -11,6 +11,7 @@ import Admin from "./models/Admin.js";
 import Product from "./models/Product.js";
 import Order from "./models/Order.js";
 import WeeklyMenu from "./models/WeeklyMenu.js";
+import fs from "fs";
 
 
 const app = express();
@@ -25,7 +26,7 @@ app.use(express.json());
 /* =========================
    🔌 MONGODB
 ========================= */
-import fs from "fs";
+
 
 if (!fs.existsSync("uploads")) {
   fs.mkdirSync("uploads");
