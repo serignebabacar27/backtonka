@@ -12,14 +12,6 @@ import Product from "./models/Product.js";
 import Order from "./models/Order.js";
 import WeeklyMenu from "./models/WeeklyMenu.js";
 
-import fs from "fs";
-
-if (!fs.existsSync("uploads")) {
-  fs.mkdirSync("uploads");
-}
-
-app.use("/uploads", express.static("uploads"));
-dotenv.config();
 
 const app = express();
 
@@ -33,6 +25,14 @@ app.use(express.json());
 /* =========================
    🔌 MONGODB
 ========================= */
+import fs from "fs";
+
+if (!fs.existsSync("uploads")) {
+  fs.mkdirSync("uploads");
+}
+
+app.use("/uploads", express.static("uploads"));
+dotenv.config();
 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Atlas connecté ✅"))
