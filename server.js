@@ -237,7 +237,7 @@ app.post(
       } = req.body;
 
       const imageUrl = req.file
-        ? `http://${req.headers.host}/uploads/${req.file.filename}`
+        ? req.file.filename
         : "";
 
       const product = new Product({
